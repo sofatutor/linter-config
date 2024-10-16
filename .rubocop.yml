@@ -1,7 +1,12 @@
 # see https://github.com/bbatsov/rubocop/blob/master/manual/cops_style.md
 require:
-  - rubocop-rails
+  # - rubocop-capybara
+  # - rubocop-factory_bot
   - rubocop-performance
+  - rubocop-rails
+  # - rubocop-rake
+  - rubocop-rspec
+  # - rubocop-rspec_rails
 
 AllCops:
   DisplayCopNames: true
