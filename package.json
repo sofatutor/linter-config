@@ -1,0 +1,29 @@
+{
+  "name": "sofatutor-eslint-config",
+  "version": "1.0.0",
+  "description": "eslint configuration for sofatutor",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "ping",
+    "build": "rm -rf dist && babel src/lib --out-dir dist --copy-files --include-dotfiles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sofatutor/linter-config.git"
+  },
+  "keywords": [
+    "eslint"
+  ],
+  "author": "sofatutor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sofatutor/linter-config/issues"
+  },
+  "homepage": "https://github.com/sofatutor/linter-config#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.25.7"
+  }
+}
