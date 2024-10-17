@@ -204,6 +204,8 @@ Style/StabbyLambdaParentheses:
   Enabled: false
 Style/StringLiterals:
   EnforcedStyle: single_quotes
+  Exclude:
+    - 'db/schema.rb'
 Style/SymbolArray:
   Enabled: false
 Style/WordArray:
