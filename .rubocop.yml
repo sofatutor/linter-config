@@ -1,51 +1,42 @@
 # see https://github.com/bbatsov/rubocop/blob/master/manual/cops_style.md
 require:
   # - rubocop-capybara
-  # - rubocop-factory_bot
-  - rubocop-performance
+  # - rubocop-factory_bot  # requires RuboCop update on MAIN
   - rubocop-rails
   # - rubocop-rake
   - rubocop-rspec
-  # - rubocop-rspec_rails
+  # - rubocop-rspec_rails  # requires RuboCop update on MAIN
+  - rubocop-performance
 
+# The following changes override RuboCop’s default config https://github.com/rubocop/rubocop/blob/master/config/default.yml
 AllCops:
   DisplayCopNames: true
   DisplayStyleGuide: true
+  NewCops: enable
   Exclude:
-  - "config/locales/*.rb"
-  - "db/old_migrations/*"
-  - "tools/*"
-  - "tools/**/*"
-  - "vendor/**/*"
-
-Rails:
-  Enabled: true
+    - 'config/locales/*.rb'
+    - 'db/old_migrations/*'
+    - 'tools/*'
+    - 'tools/**/*'
+    - 'vendor/**/*'
 
 # Layout
 Layout/ArrayAlignment:
   Enabled: false
-
 Layout/HashAlignment:
   Enabled: false
-
 Layout/ParameterAlignment:
   Enabled: false
-
 Layout/ClosingParenthesisIndentation:
   Enabled: false
-
 Layout/DotPosition:
   Enabled: false
-
 Layout/ExtraSpacing:
   Enabled: false
-
 Layout/FirstArrayElementIndentation:
   Enabled: false
-
 Layout/FirstHashElementIndentation:
   Enabled: false
-
 Layout/LineLength:
   Max: 200
   Exclude:
@@ -54,84 +45,59 @@ Layout/LineLength:
     - 'lib/business_central/export.rb'
     - 'spec/lib/business_central/export_spec.rb'
     - 'tools/reactivate_learner/*'
-
 Layout/MultilineMethodCallIndentation:
   Enabled: false
-
 Layout/MultilineOperationIndentation:
   Enabled: false
-
 Layout/SpaceAroundOperators:
   Enabled: false
-
 Layout/SpaceBeforeFirstArg:
   Enabled: false
-
 Layout/SpaceInLambdaLiteral:
   Enabled: false
-
 Layout/SpaceInsideArrayPercentLiteral:
   Enabled: false
-
 Layout/SpaceInsideArrayLiteralBrackets:
   Enabled: false
-
 Layout/SpaceInsideReferenceBrackets:
   Enabled: false
-
 Layout/SpaceInsideParens:
   Exclude:
     - 'tools/reactivate_learner/*'
-
 Layout/TrailingWhitespace:
-  Enabled: true
   AllowInHeredoc: true
 
 # Lint
 Lint/AmbiguousBlockAssociation:
   Exclude:
     - 'spec/**/*'
-
-Lint/AmbiguousRegexpLiteral:
-  Exclude:
-    - 'features/step_definitions/**/*'
-
 Lint/AssignmentInCondition:
   Enabled: false
-
 Lint/ConstantDefinitionInBlock:
   Exclude:
     - 'spec/**/*'
-
 Lint/SuppressedException:
   AllowComments: true
 
 # Metrics
 Metrics/AbcSize:
   Enabled: false
-
 Metrics/BlockLength:
   Enabled: false
-
 Metrics/ClassLength:
   Enabled: false
-
 Metrics/CyclomaticComplexity:
-  Enabled: false
-
+  Max: 10
 Metrics/MethodLength:
   Enabled: false
-
 Metrics/ModuleLength:
   Enabled: false
-
 Metrics/PerceivedComplexity:
-  Enabled: false
+  Max: 10
 
 # Naming
 Naming/RescuedExceptionsVariableName:
   Enabled: false
-
 Naming/MethodParameterName:
   inherit_mode:
     merge:
@@ -142,184 +108,127 @@ Naming/MethodParameterName:
 # Performance
 Performance/Casecmp:
   Enabled: false
-
 Performance/StringReplacement:
   Enabled: false
 
 # Rails
 Rails/DynamicFindBy:
   Enabled: false
-
 Rails/FilePath:
   Enabled: false
-
 Rails/HasManyOrHasOneDependent:
   Enabled: false
-
 Rails/InverseOf:
   Enabled: false
-
 Rails/Output:
   Exclude:
     - 'db/migrate/*'
     - 'lib/changelog/**/*'
     - 'lib/tasks/*'
-
+Rails/ReversibleMigration:
+  Enabled: false
 Rails/ScopeArgs:
   Enabled: false
-
 Rails/SkipsModelValidations:
   Enabled: false
-
 Rails/TimeZone:
   Exclude:
     - 'lib/changelog/**/*'
-
 Rails/UnknownEnv:
   Environments:
     - development
-    - test
-    - preview
-    - testing
-    - staging
     - production
-
+    - staging
+    - test
 Rails/Validation:
   Enabled: false
 
-# Style ÔÇô Please keep alphabetical order!
+# Style
 Style/TrailingCommaInArrayLiteral:
   Enabled: false
-
 Style/TrailingCommaInHashLiteral:
   Enabled: false
-
 Style/AsciiComments:
   Enabled: false
-
 Style/BlockComments:
   Enabled: false
-
 Style/BlockDelimiters:
   Enabled: false
-
 Style/CaseEquality:
   Enabled: false
-
 Style/ClassAndModuleChildren:
   Enabled: false
-
-Style/CollectionMethods:
-  Enabled: true
-  PreferredMethods:
-    collect: map
-    collect!: map!
-    detect: find
-    find_all: select
-    inject: reduce
-    length: size
-
 Style/ConditionalAssignment:
   Enabled: false
-
 Style/EmptyMethod:
-  Enabled: true
   EnforcedStyle: expanded
-
 Style/For:
   Enabled: false
-
 Style/FormatString:
   EnforcedStyle: percent
-
 Style/FormatStringToken:
   Enabled: false
-
 Style/FrozenStringLiteralComment:
   Enabled: false
-
 Style/GuardClause:
   Enabled: false
-
 Style/HashSyntax:
-  Enabled: true
-  EnforcedShorthandSyntax: never
-
+  EnforcedShorthandSyntax: either
 Style/IfUnlessModifier:
   Enabled: false
-
 Style/LineEndConcatenation:
   Enabled: false
-
 Style/Lambda:
   Enabled: false
-
 Style/MethodDefParentheses:
   Enabled: false
-
 Style/MutableConstant:
   Enabled: false
-
 Style/NumericLiterals:
   Enabled: false
-
 Style/NumericPredicate:
   Enabled: false
-
 Style/ParallelAssignment:
   Enabled: false
-
 Style/PercentLiteralDelimiters:
   Enabled: false
-
+Style/PerlBackrefs:
+  Enabled: false
 Style/RedundantReturn:
   AllowMultipleReturnValues: true
-
 Style/RescueStandardError:
   EnforcedStyle: implicit
-
 Style/SafeNavigation:
   Enabled: false
-
 Style/StabbyLambdaParentheses:
   Enabled: false
-
 Style/StringLiterals:
   EnforcedStyle: single_quotes
-
+  Exclude:
+    - 'db/schema.rb'
 Style/SymbolArray:
   Enabled: false
-
 Style/WordArray:
   Enabled: false
-
 Style/Documentation:
   Enabled: false
 
 # RSpec
 RSpec/ExampleLength:
   Max: 20
-
 RSpec/MultipleMemoizedHelpers:
   Enabled: false
-
 RSpec/MessageChain:
   Enabled: false
-
 RSpec/MessageSpies:
   Enabled: false
-
 RSpec/MultipleExpectations:
   Enabled: false
-
 RSpec/AnyInstance:
   Enabled: false
-
 RSpec/NamedSubject:
   Enabled: false
-
 RSpec/SubjectStub:
   Enabled: false
-
 RSpec/LeadingSubject:
   Enabled: false
