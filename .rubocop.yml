@@ -4,7 +4,7 @@ require:
   # - rubocop-factory_bot  # requires RuboCop update
   - rubocop-rails
   # - rubocop-rake
-  # - rubocop-rspec
+  - rubocop-rspec
   # - rubocop-rspec_rails  # requires RuboCop update
   - rubocop-performance
 
