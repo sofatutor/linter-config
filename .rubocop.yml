@@ -137,11 +137,9 @@ Rails/TimeZone:
 Rails/UnknownEnv:
   Environments:
     - development
-    - preview
     - production
     - staging
     - test
-    - testing
 Rails/Validation:
   Enabled: false
 
