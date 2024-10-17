@@ -194,6 +194,8 @@ Style/ParallelAssignment:
   Enabled: false
 Style/PercentLiteralDelimiters:
   Enabled: false
+Style/PerlBackrefs:
+  Enabled: false
 Style/RedundantReturn:
   AllowMultipleReturnValues: true
 Style/RescueStandardError:
