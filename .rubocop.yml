@@ -1,11 +1,11 @@
 # see https://github.com/bbatsov/rubocop/blob/master/manual/cops_style.md
 require:
   # - rubocop-capybara
-  # - rubocop-factory_bot  # requires RuboCop update
+  # - rubocop-factory_bot  # requires RuboCop update on MAIN
   - rubocop-rails
   # - rubocop-rake
   - rubocop-rspec
-  # - rubocop-rspec_rails  # requires RuboCop update
+  # - rubocop-rspec_rails  # requires RuboCop update on MAIN
   - rubocop-performance
 
 # The following changes override RuboCop’s default config https://github.com/rubocop/rubocop/blob/master/config/default.yml
