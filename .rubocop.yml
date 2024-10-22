@@ -232,3 +232,5 @@ RSpec/SubjectStub:
   Enabled: false
 RSpec/LeadingSubject:
   Enabled: false
+RSpec/ContextWording:
+  Enabled: false
