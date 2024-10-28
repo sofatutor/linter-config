@@ -93,7 +93,7 @@ Metrics/MethodLength:
 Metrics/ModuleLength:
   Enabled: false
 Metrics/PerceivedComplexity:
-  Max: 10
+  Enabled: false  # We use CyclomaticComplexity instead.
 
 # Naming
 Naming/RescuedExceptionsVariableName:
