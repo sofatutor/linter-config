@@ -234,3 +234,5 @@ RSpec/LeadingSubject:
   Enabled: false
 RSpec/ContextWording:
   Enabled: false
+RSpec/PredicateMatcher:
+  Enabled: false
