@@ -137,6 +137,7 @@ Rails/TimeZone:
 Rails/UnknownEnv:
   Environments:
     - development
+    - local
     - production
     - staging
     - test
