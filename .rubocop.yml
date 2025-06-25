@@ -104,6 +104,8 @@ Naming/MethodParameterName:
       - AllowedNames
   AllowedNames:
     - hd
+Naming/VariableNumber:
+  Enabled: false
 
 # Performance
 Performance/Casecmp:
