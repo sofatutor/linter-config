@@ -145,6 +145,8 @@ Rails/UnknownEnv:
     - test
 Rails/Validation:
   Enabled: false
+Rails/RedundantPresenceValidationOnBelongsTo:
+  Enabled: false
 
 # Style
 Style/TrailingCommaInArrayLiteral:
