@@ -23,10 +23,6 @@ AllCops:
 # Layout
 Layout/ArrayAlignment:
   Enabled: false
-Layout/HashAlignment:
-  Enabled: false
-Layout/ParameterAlignment:
-  Enabled: false
 Layout/ClosingParenthesisIndentation:
   Enabled: false
 Layout/DotPosition:
@@ -36,6 +32,8 @@ Layout/ExtraSpacing:
 Layout/FirstArrayElementIndentation:
   Enabled: false
 Layout/FirstHashElementIndentation:
+  Enabled: false
+Layout/HashAlignment:
   Enabled: false
 Layout/LineLength:
   Max: 200
@@ -49,21 +47,23 @@ Layout/MultilineMethodCallIndentation:
   Enabled: false
 Layout/MultilineOperationIndentation:
   Enabled: false
+Layout/ParameterAlignment:
+  Enabled: false
 Layout/SpaceAroundOperators:
   Enabled: false
 Layout/SpaceBeforeFirstArg:
   Enabled: false
 Layout/SpaceInLambdaLiteral:
   Enabled: false
-Layout/SpaceInsideArrayPercentLiteral:
-  Enabled: false
 Layout/SpaceInsideArrayLiteralBrackets:
   Enabled: false
-Layout/SpaceInsideReferenceBrackets:
+Layout/SpaceInsideArrayPercentLiteral:
   Enabled: false
 Layout/SpaceInsideParens:
   Exclude:
     - 'tools/reactivate_learner/*'
+Layout/SpaceInsideReferenceBrackets:
+  Enabled: false
 Layout/TrailingWhitespace:
   AllowInHeredoc: true
 
@@ -96,14 +96,14 @@ Metrics/PerceivedComplexity:
   Enabled: false  # We use CyclomaticComplexity instead.
 
 # Naming
-Naming/RescuedExceptionsVariableName:
-  Enabled: false
 Naming/MethodParameterName:
   inherit_mode:
     merge:
       - AllowedNames
   AllowedNames:
     - hd
+Naming/RescuedExceptionsVariableName:
+  Enabled: false
 Naming/VariableNumber:
   Enabled: false
 
@@ -127,6 +127,8 @@ Rails/Output:
     - 'db/migrate/*'
     - 'lib/changelog/**/*'
     - 'lib/tasks/*'
+Rails/RedundantPresenceValidationOnBelongsTo:
+  Enabled: false
 Rails/ReversibleMigration:
   Enabled: false
 Rails/ScopeArgs:
@@ -145,14 +147,8 @@ Rails/UnknownEnv:
     - test
 Rails/Validation:
   Enabled: false
-Rails/RedundantPresenceValidationOnBelongsTo:
-  Enabled: false
 
 # Style
-Style/TrailingCommaInArrayLiteral:
-  Enabled: false
-Style/TrailingCommaInHashLiteral:
-  Enabled: false
 Style/AsciiComments:
   Enabled: false
 Style/BlockComments:
@@ -164,6 +160,8 @@ Style/CaseEquality:
 Style/ClassAndModuleChildren:
   Enabled: false
 Style/ConditionalAssignment:
+  Enabled: false
+Style/Documentation:
   Enabled: false
 Style/EmptyMethod:
   EnforcedStyle: expanded
@@ -183,9 +181,9 @@ Style/HashSyntax:
   EnforcedShorthandSyntax: either
 Style/IfUnlessModifier:
   Enabled: false
-Style/LineEndConcatenation:
-  Enabled: false
 Style/Lambda:
+  Enabled: false
+Style/LineEndConcatenation:
   Enabled: false
 Style/MethodDefParentheses:
   Enabled: false
@@ -215,31 +213,33 @@ Style/StringLiterals:
     - 'db/schema.rb'
 Style/SymbolArray:
   Enabled: false
-Style/WordArray:
+Style/TrailingCommaInArrayLiteral:
   Enabled: false
-Style/Documentation:
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+Style/WordArray:
   Enabled: false
 
 # RSpec
+RSpec/AnyInstance:
+  Enabled: false
+RSpec/ContextWording:
+  Enabled: false
 RSpec/ExampleLength:
   Max: 20
-RSpec/MultipleMemoizedHelpers:
+RSpec/LeadingSubject:
   Enabled: false
 RSpec/MessageChain:
   Enabled: false
 RSpec/MessageSpies:
   Enabled: false
-RSpec/MultipleExpectations:
+RSpec/MultipleMemoizedHelpers:
   Enabled: false
-RSpec/AnyInstance:
+RSpec/MultipleExpectations:
   Enabled: false
 RSpec/NamedSubject:
   Enabled: false
-RSpec/SubjectStub:
-  Enabled: false
-RSpec/LeadingSubject:
-  Enabled: false
-RSpec/ContextWording:
-  Enabled: false
 RSpec/PredicateMatcher:
+  Enabled: false
+RSpec/SubjectStub:
   Enabled: false
