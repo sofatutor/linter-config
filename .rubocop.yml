@@ -7,6 +7,7 @@ require:
   - rubocop-rspec
   # - rubocop-rspec_rails  # requires RuboCop update on MAIN
   - rubocop-performance
+  - rubocop-haml
 
 # The following changes override RuboCop’s default config https://github.com/rubocop/rubocop/blob/master/config/default.yml
 AllCops:
