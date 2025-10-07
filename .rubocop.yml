@@ -71,6 +71,7 @@ Layout/TrailingWhitespace:
 Lint/AmbiguousBlockAssociation:
   Exclude:
     - 'spec/**/*'
+    - 'integration/**/*'
 Lint/AssignmentInCondition:
   Enabled: false
 Lint/ConstantDefinitionInBlock:
