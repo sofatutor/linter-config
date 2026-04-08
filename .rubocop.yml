@@ -1,5 +1,5 @@
 # see https://github.com/bbatsov/rubocop/blob/master/manual/cops_style.md
-require:
+plugins:
   # - rubocop-capybara
   # - rubocop-factory_bot  # requires RuboCop update on MAIN
   - rubocop-rails
