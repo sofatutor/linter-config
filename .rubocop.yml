@@ -19,6 +19,7 @@ AllCops:
     - 'tools/*'
     - 'tools/**/*'
     - 'vendor/**/*'
+    - '**/cdk.out/**/*'
 
 # Layout
 Layout/ArrayAlignment:
