@@ -1,5 +1,6 @@
 # see https://github.com/bbatsov/rubocop/blob/master/manual/cops_style.md
-plugins:
+# require (not plugins): RuboCop < 1.72 treats `plugins:` as an unknown department.
+require:
   # - rubocop-capybara
   # - rubocop-factory_bot  # requires RuboCop update on MAIN
   - rubocop-rails
